@@ -1,4 +1,4 @@
-from currency_exchange_tool import excahnge
+from currency_exchange_tool import exchange
 from shop_functions import start_shop
 
 print('Welcome to my shop')
