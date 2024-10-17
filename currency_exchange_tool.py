@@ -1,13 +1,20 @@
-import math # you'll probably need this
+currency_dict  =  { 
+    "dollar" : 1.31,
+    "euro" : 1.31,
+    "cad" : 1.80,
+    "yen" : 194.87,
+    "HKD":  10.17 }
 
-exchange_rates = {
-    'USD': 1.13, #I.E. 1 Pound is 1.13 Dollars
-    'EUR': 1.15,
-}
 
-def check_currency_exists(currency):
-    return
+def exchange(chosen_currency,total_price):
+    if chosen_currency in currency_dict  :
+      if 10 <= float(total_price) <=1000:
+        FP = float(total_price)* currency_dict[chosen_currency]
+        FP = round(FP,3)
+        print(FP)
+        return FP
+      else:
+        print("not a valid total price")
 
-def currency_convert(original_c, new_c, amount):
-    # your code here
-    return
+    else:
+        print(f"{chosen_currency} is not an option")
